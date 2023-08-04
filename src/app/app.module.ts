@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
-import { CanDeactivateLoginGuard } from './can-deactivate-login.guard';
 
 @NgModule({
   imports: [
@@ -20,7 +19,7 @@ import { CanDeactivateLoginGuard } from './can-deactivate-login.guard';
     NavbarComponent, 
     LoginComponent,
   ],
-  providers: [CanDeactivateLoginGuard],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

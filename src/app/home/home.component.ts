@@ -12,4 +12,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  canDeactivate() {
+      return confirm('Are you sure you want leave home')
+  }
 }

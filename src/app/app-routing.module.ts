@@ -8,12 +8,12 @@ import { LoginComponent } from './login/login.component';
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent, canDeactivate: [canDeactivate]},
-  {path: 'home', component: HomeComponent},
+  {path: 'home', component: HomeComponent, canDeactivate: [canDeactivate]},
   {path: 'accounts', component: AccountsComponent},
   
 ]
 
-function canDeactivate(component: LoginComponent) {
+function canDeactivate(component) {
   return component.canDeactivate()
 }
 @NgModule({
