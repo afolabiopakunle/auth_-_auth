@@ -7,6 +7,7 @@
         class="form-control"
         id="exampleInputEmail1"
         aria-describedby="emailHelp"
+        formControlName='email'
       />
       <div id="emailHelp" class="form-text">
         We'll never share your email with anyone else.
@@ -14,14 +15,24 @@
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" />
+      <input 
+      type="password" 
+      class="form-control" 
+      id="exampleInputPassword1"
+      formControlName="password"
+      />
     </div>
     <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+      <input 
+      type="checkbox" 
+      class="form-check-input" 
+      id="exampleCheck1" 
+      formControlName="agree"
+      />
       <label class="form-check-label pointer" for="exampleCheck1"
         >Agree to terms & conditions</label
       >
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
