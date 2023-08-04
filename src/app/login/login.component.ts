@@ -19,6 +19,13 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  canDeactivate() {
+    if(this.form.dirty) {
+      return confirm('Are you sure you want leave page')
+    }
+    return true
+  }
+
   submit() {
     console.log(this.form.value)
   }
