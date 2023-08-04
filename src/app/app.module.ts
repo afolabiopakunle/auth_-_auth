@@ -14,7 +14,11 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     ReactiveFormsModule,
   ],
-  declarations: [AppComponent, NavbarComponent, LoginComponent],
+  declarations: [
+    AppComponent, 
+    NavbarComponent, 
+    LoginComponent,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
